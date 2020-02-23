@@ -1,22 +1,16 @@
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-<button type="button" class="btn btn-link">Link</button>
-<h1>HOALSDAS</h1>
-<input [(ngModel)]="tipo">
-<input [(ngModel)]="this.data2[0][2]">
-<button (click)="hola()" type="button" class="btn btn-dark">log</button>
+<h1>DashBoard</h1>
 <div class="row">
-    <div class="col-5">
-        <div class="card">
-            <div id="chart1"></div>
+    <div class="col">
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <app-bar></app-bar>
+            </div>
         </div>
+        
     </div>
+    <div class="col"></div>
+    <div class="col"></div>
 </div>
 
 <router-outlet></router-outlet>

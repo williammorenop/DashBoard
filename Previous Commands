@@ -1,3 +1,4 @@
+npm i jquery
 npm install bootstrap
 npm i d3
 npm i c3
@@ -10,6 +11,7 @@ angular.json
               "./node_modules/c3/c3.css"
             ],
             "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/d3/dist/d3.js",
               "./node_modules/c3/c3.js"
