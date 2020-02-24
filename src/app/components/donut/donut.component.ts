@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as c3 from 'c3';
 
 @Component({
@@ -6,23 +6,36 @@ import * as c3 from 'c3';
   templateUrl: './donut.component.html',
   styleUrls: ['./donut.component.css']
 })
-export class DonutComponent implements OnInit {
+export class DonutComponent implements OnInit, OnChanges {
 
-  data2 = [
-    ['PUJ', 20],
-    ['EIJG', 50],
-    ['UD', 30],
-  ];
+  @Input()
+  dataDonut: any;
 
   dataChart;
 
+  chart;
+
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('OnChanges');
+    console.log(changes);
+
+    if(this.chart){
+      this.chart.load({
+        columns: this.dataDonut
+      });
+    }
+  }
+
+
   ngOnInit() {
+    console.log('OnInit');
+
     this.dataChart = {
       bindto: '#chart2',
       data: {
-        columns: this.data2,
+        columns: this.dataDonut,
         type: 'donut',
         /*types: {
           PUJ: 'pie',
@@ -37,9 +50,9 @@ export class DonutComponent implements OnInit {
       // onmouseover: (d, i) => { console.log('onmouseover', d, i); },
       // onmouseout: (d, i) => { console.log('onmouseout', d, i); }
     };
-    // this.dataChart.data.columns = this.data2;
+    // this.dataChart.data.columns = this.dataDonut;
 
-    const chart = c3.generate(
+    this.chart = c3.generate(
       this.dataChart
     );
   }

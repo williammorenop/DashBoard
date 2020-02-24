@@ -55,8 +55,8 @@ export class BarComponent implements OnInit {
       data
     });
 
-    this.refresh = setInterval(() => {
+    /*this.refresh = setInterval(() => {
       console.log('intervalo');
-    }, 1000);
+    }, 1000);*/
   }
 }
