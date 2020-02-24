@@ -8,6 +8,8 @@ import { BarComponent } from './components/bar/bar.component';
 import { DonutComponent } from './components/donut/donut.component';
 import { AreaComponent } from './components/area/area.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { AreaComponent } from './components/area/area.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

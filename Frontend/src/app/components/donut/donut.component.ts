@@ -21,7 +21,7 @@ export class DonutComponent implements OnInit, OnChanges {
     console.log('OnChanges');
     console.log(changes);
 
-    if(this.chart){
+    if (this.chart) {
       this.chart.load({
         columns: this.dataDonut
       });
