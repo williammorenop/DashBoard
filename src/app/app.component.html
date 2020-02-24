@@ -1,16 +1,29 @@
 <h1>DashBoard</h1>
 <div class="row">
     <div class="col">
-        <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+        <div class="card" >
+            <div class="card-body text-center">
+                <h5>Barras</h5>
                 <app-bar></app-bar>
             </div>
         </div>
-        
     </div>
-    <div class="col"></div>
-    <div class="col"></div>
+    <div class="col">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="mx-auto card-title">Dona</h5>
+                    <app-donut></app-donut>
+                </div>
+            </div>
+    </div>
+    <div class="col">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Area</h5>
+                <app-area></app-area>
+            </div>
+        </div>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

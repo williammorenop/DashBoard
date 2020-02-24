@@ -10,9 +10,11 @@ export class BarComponent implements OnInit {
 
   data2 = [
     ['Enero', 10, 20, 10, 20, 15, 25],
-    ['Febrero', 1000, 20, 10, 40, 15, 25]
+    ['Febrero', 10, 20, 10, 30, 15, 25]
   ];
   tipo = '';
+
+  refresh;
 
   constructor() { }
 
@@ -25,9 +27,10 @@ export class BarComponent implements OnInit {
       types: null
     };
     data.columns = this.data2;
-    data.types.Febrero = this.tipo;
-    data.types.Enero = this.tipo;
-
+    data.types = {
+      Enero: this.tipo,
+      Febrero: this.tipo
+    };
     const chart = c3.generate({
       bindto: '#chart1',
       data
@@ -51,5 +54,9 @@ export class BarComponent implements OnInit {
       bindto: '#chart1',
       data
     });
+
+    this.refresh = setInterval(() => {
+      console.log('intervalo');
+    }, 1000);
   }
 }
