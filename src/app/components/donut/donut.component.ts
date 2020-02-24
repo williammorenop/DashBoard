@@ -12,7 +12,7 @@ export class DonutComponent implements OnInit {
     ['PUJ', 20],
     ['EIJG', 50],
     ['UD', 30],
-];
+  ];
 
   dataChart;
 
@@ -23,13 +23,21 @@ export class DonutComponent implements OnInit {
       bindto: '#chart2',
       data: {
         columns: this.data2,
-        type: 'donut'
+        type: 'donut',
+        /*types: {
+          PUJ: 'pie',
+          EIJG: 'donut',
+          UD: 'donut'
+        }*/
       },
       donut: {
         title: 'Titulo'
-      }
+      },
+      // onclick: (d, i) => { console.log('onclick', d, i); },
+      // onmouseover: (d, i) => { console.log('onmouseover', d, i); },
+      // onmouseout: (d, i) => { console.log('onmouseout', d, i); }
     };
-    //this.dataChart.data.columns = this.data2;
+    // this.dataChart.data.columns = this.data2;
 
     const chart = c3.generate(
       this.dataChart

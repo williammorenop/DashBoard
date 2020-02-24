@@ -12,7 +12,7 @@ export class BarComponent implements OnInit {
     ['Enero', 10, 20, 10, 20, 15, 25],
     ['Febrero', 10, 20, 10, 30, 15, 25]
   ];
-  tipo = '';
+  tipo = 'bar';
 
   refresh;
 
